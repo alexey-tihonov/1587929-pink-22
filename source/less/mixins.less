@@ -1,0 +1,54 @@
+.resize(@property, @min: false, @mid: false, @max: false) {
+  & when (isnumber(@min)) {
+      @{property}: @min*1px;
+  }
+
+  /*& when (isnumber(@mid)) {
+    @media (min-width: @bpTablet) {
+      @{property}: @mid*1px;
+    }
+  }
+
+  & when (isnumber(@max)) {
+    @media (min-width: @bpDesktop) {
+      @{property}: @max*1px;
+    }
+  }*/
+}
+
+
+.setBg(@top: false, @right: false, @bottom: false, @left: false, @width: false, @height: false, @background: false, @content: "") {
+  content: @content;
+  position: absolute;
+  & when not (@top = false) {
+    top: @top;
+  }
+  & when not (@right = false) {
+    right: @right;
+  }
+  & when not (@bottom = false) {
+    bottom: @bottom;
+  }
+  & when not (@left = false) {
+    left: @left;
+  }
+  & when (isnumber(@width)) {
+    & when (@width = 0) {
+      width: 0;
+    }
+    & when not (@width = 0) {
+      width: @width*1px;
+    }
+  }
+  & when (isnumber(@height)) {
+    & when (@height = 0) {
+      height: 0;
+    }
+    & when not (@height = 0) {
+      height: @height*1px;
+    }
+  }
+  & when (isstring(@background)) {
+    background: url(@background) no-repeat;
+  }
+}

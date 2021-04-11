@@ -1,0 +1,55 @@
+.page {
+  box-sizing: border-box;
+}
+
+.body {
+  .resize(max-width, 660, 1200);
+  min-width: 320px;
+  font-family: @baseFont;
+  .resize(font-size, 14, 14, 18);
+  .resize(line-height, 24, 24, 30);
+  font-weight: @baseFontWeight;
+  background-color: @lightColor;
+  color: @baseColor;
+  overflow-x: hidden;
+}
+
+h1 {
+  .resize(font-size, 24, 50, 50);
+  .resize(line-height, 32.68, 68.09, 68.09);
+  font-weight: 300;
+}
+
+h2 {
+  .resize(font-size, 24, 40, 50);
+  .resize(line-height, 28.8, 54.47, 68.09);
+  font-weight: 300;
+}
+
+h3 {
+  .resize(font-size, 18, 18, 30);
+  .resize(line-height, 24, 24, 30);
+  font-weight: 700;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}

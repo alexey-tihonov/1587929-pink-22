@@ -1,0 +1,131 @@
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: @baseColor;
+
+  &__logo {
+    display: inline-flex;
+    flex: 1 0 auto;
+    padding: 23px 20px;
+  }
+
+  .nav {
+    flex: 1 1 100%;
+    .resize(font-size, 18px);
+    font-weight: bold;
+    line-height: 32px;
+    background-color: inherit;
+
+    &-toggle {
+      display: none;
+      background-color: transparent;
+      cursor: pointer;
+      border: none;
+      padding: 21px 20px;
+
+      &__icon {
+        fill: @lightColor;
+      }
+
+      &:hover {
+        .nav-toggle__icon {
+          fill: @brightColor;
+        }
+      }
+
+      &:focus {
+        outline: 1px dashed @lightColor;
+        outline-offset: -1px;
+      }
+
+      &:active {
+        .nav-toggle__icon {
+          opacity: 0.3;
+        }
+      }
+    }
+
+    &__list {
+      display: flex;
+      flex-direction: column;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      border-top: 1px solid @darkColor;
+    }
+
+    &__item {
+      display: flex;
+      border-bottom: 1px solid @darkColor;
+      border-top: 1px solid #485461;
+
+      &-link {
+        width: 100%;
+        padding: 15px;
+        text-align: center;
+        text-transform: uppercase;
+        text-decoration: none;
+        color: @lightColor;
+
+        &--current {
+          cursor: default;
+        }
+
+        &:not(.nav__item-link--current) {
+          &:hover {
+            color: @brightColor;
+          }
+
+          &:active {
+            opacity: 0.3;
+          }
+        }
+      }
+    }
+  }
+
+  &--closed {
+    position: sticky;
+    background-color: rgba(@darkColor, 0.3);
+
+    .header__logo {
+      padding: 22px 20px 21px;
+    }
+
+    .nav {
+      display: none;
+
+      &-toggle {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+
+        &__icon {
+          &--close {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+  &--opened {
+    .header-logo {
+      padding: 22px 20px 21px 20px;
+    }
+
+    .nav {
+      &-toggle {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+
+        &__icon {
+          &--open {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
