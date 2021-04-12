@@ -1,0 +1,32 @@
+.price-package {
+  padding: 19px 20px 35px;
+  background: @baseColor;
+  color: @lightColor;
+  border-top-left-radius: 3px;
+  line-height: 1;
+
+  &--hit {
+    position: relative;
+
+    &::before {
+      .setBg(0, false, false, -2px, 74, 74, "../img/hit-ribbon.png");
+    }
+
+    &::after {
+      .setBg(12px, false, false, 22px, false, false, false, "ХИТ");
+      font-weight: normal;
+      transform: translateX(-8px) translateY(10px) rotate(-45deg);
+    }
+  }
+
+  .price-package__name {
+    margin: 0 0 10px;
+    font-size: 16px;
+  }
+
+  .price-package__value {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 300;
+  }
+}

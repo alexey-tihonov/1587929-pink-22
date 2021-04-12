@@ -1,0 +1,22 @@
+.contacts__item-link {
+  color: @brightColor;
+  font-size: 24px;
+  line-height: 32.68px;
+  font-weight: 300;
+  text-decoration: none;
+
+  &:hover {
+    color: @baseColor;
+    text-decoration: 1px @baseColor underline;
+  }
+
+  &:focus {
+    outline: 1px dashed @baseColor;
+    outline-offset: 1px;
+  }
+
+  &:active {
+    opacity: 0.3;
+    text-decoration: none;
+  }
+}

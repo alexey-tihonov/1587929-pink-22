@@ -3,36 +3,36 @@
   text-align: center;
   line-height: 30px;
 
-  &__text {
-    margin: 12px 0;
+  .reviews__text {
+    margin: 11px 0 13px;
   }
 
-  &__item {
+  .reviews__item {
     margin: 0;
   }
 
-  &__author-name {
+  .reviews__author-name {
     .resize(font-size, 18, 20, 24);
     font-style: normal;
     font-weight: 700;
     color: @darkColor;
   }
 
-  &__author-desc {
+  .reviews__author-desc {
     display: none;
   }
 
-  &__buttons {
+  .reviews__buttons {
     display: none;
   }
 
-  &__toggles {
+  .reviews__toggles {
     display: flex;
     justify-content: center;
     margin: 31px 0 20px;
   }
 
-  &__toggle {
+  .reviews__toggle {
     width: 12px;
     height: 12px;
     margin: 0 6.5px;
@@ -48,14 +48,14 @@
       cursor: default;
     }
 
+    &:focus {
+      outline: 1px dashed @baseColor;
+      outline-offset: 3px;
+    }
+
     &:not(.reviews__toggle--current) {
       &:hover {
         background-color: rgba(@baseColor, 0.6);
-      }
-
-      &:focus {
-        outline: 1px dashed @baseColor;
-        outline-offset: 3px;
       }
 
       &:active {

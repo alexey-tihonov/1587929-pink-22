@@ -1,0 +1,31 @@
+.price-control {
+  width: 12px;
+  height: 12px;
+  margin: 0 6.5px;
+  padding: 0;
+  border-radius: 50%;
+  background-color: rgba(@baseColor, 0.3);
+  border: 3px solid @bgPrimaryColor;
+  cursor: pointer;
+
+  &--current {
+    background-color: @lightColor;
+    border-color: @baseColor;
+    cursor: default;
+  }
+
+  &:focus {
+    outline: 1px dashed @baseColor;
+    outline-offset: 3px;
+  }
+
+  &:not(.price-control--current) {
+    &:hover {
+      background-color: rgba(@baseColor, 0.6);
+    }
+
+    &:active {
+      background-color: rgba(@baseColor, 0.1);
+    }
+  }
+}

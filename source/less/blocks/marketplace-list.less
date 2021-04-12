@@ -1,0 +1,22 @@
+.marketplace-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin: 32px 0 4px;
+  padding: 0;
+  list-style: none;
+}
+
+.marketplace-list__item {
+  margin: 0 17.5px 10px;
+}
+
+.marketplace-list__item-link {
+  display: inline-flex;
+
+  &:focus {
+    outline: 1px dashed @lightColor;
+    outline-offset: 3px;
+  }
+}
