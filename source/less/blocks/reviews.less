@@ -2,65 +2,65 @@
   padding: 41px 20px 11px;
   text-align: center;
   line-height: 30px;
+}
 
-  .reviews__text {
-    margin: 11px 0 13px;
+.reviews__text {
+  margin: 11px 0 13px;
+}
+
+.reviews__item {
+  margin: 0;
+}
+
+.reviews__author-name {
+  .resize(font-size, 18, 20, 24);
+  font-style: normal;
+  font-weight: 700;
+  color: @darkColor;
+}
+
+.reviews__author-desc {
+  display: none;
+}
+
+.reviews__buttons {
+  display: none;
+}
+
+.reviews__toggles {
+  display: flex;
+  justify-content: center;
+  margin: 31px 0 20px;
+}
+
+.reviews__toggle {
+  width: 12px;
+  height: 12px;
+  margin: 0 6.5px;
+  padding: 0;
+  border-radius: 50%;
+  background-color: rgba(@baseColor, 0.3);
+  border: 3px solid @lightColor;
+  cursor: pointer;
+
+  &--current {
+    background-color: @lightColor;
+    border-color: @baseColor;
+    cursor: default;
   }
 
-  .reviews__item {
-    margin: 0;
+  &:focus {
+    outline: 1px dashed @baseColor;
+    outline-offset: 3px;
   }
 
-  .reviews__author-name {
-    .resize(font-size, 18, 20, 24);
-    font-style: normal;
-    font-weight: 700;
-    color: @darkColor;
-  }
-
-  .reviews__author-desc {
-    display: none;
-  }
-
-  .reviews__buttons {
-    display: none;
-  }
-
-  .reviews__toggles {
-    display: flex;
-    justify-content: center;
-    margin: 31px 0 20px;
-  }
-
-  .reviews__toggle {
-    width: 12px;
-    height: 12px;
-    margin: 0 6.5px;
-    padding: 0;
-    border-radius: 50%;
-    background-color: rgba(@baseColor, 0.3);
-    border: 3px solid @lightColor;
-    cursor: pointer;
-
-    &--current {
-      background-color: @lightColor;
-      border-color: @baseColor;
-      cursor: default;
+  &:not(.reviews__toggle--current) {
+    &:hover {
+      background-color: rgba(@baseColor, 0.6);
     }
 
-    &:focus {
-      outline: 1px dashed @baseColor;
-      outline-offset: 3px;
-    }
-
-    &:not(.reviews__toggle--current) {
-      &:hover {
-        background-color: rgba(@baseColor, 0.6);
-      }
-
-      &:active {
-        background-color: rgba(@baseColor, 0.1);
-      }
+    &:active {
+      background-color: rgba(@baseColor, 0.1);
     }
   }
 }

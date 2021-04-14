@@ -3,34 +3,34 @@
   background-color: @bgBaseColor;
   text-align: center;
   font-weight: 300;
+}
 
-  .promo-content__button {
-    display: inline-flex;
-    padding: 16px 35px 16px 36px;
-    border: 3px solid @lightColor;
-    border-radius: 29px;
-    color: inherit;
-    font-weight: bold;
-    font-size: 18px;
-    line-height: 18px;
-    text-decoration: none;
+.promo-content__button {
+  display: inline-flex;
+  padding: 16px 35px 16px 36px;
+  border: 3px solid @lightColor;
+  border-radius: 29px;
+  color: inherit;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 18px;
+  text-decoration: none;
 
-    &:hover {
-      background-color: @lightColor;
-      color: @brightColor;
-    }
-
-    &:focus {
-      outline: 1px dashed @lightColor;
-      outline-offset: 2px;
-    }
-
-    &:active {
-      color: rgba(@brightColor, 0.3);
-    }
+  &:hover {
+    background-color: @lightColor;
+    color: @brightColor;
   }
 
-  .promo-content__text {
-    margin: 0 auto 10px;
+  &:focus {
+    outline: 1px dashed @lightColor;
+    outline-offset: 2px;
   }
+
+  &:active {
+    color: rgba(@brightColor, 0.3);
+  }
+}
+
+.promo-content__text {
+  margin: 0 auto 10px;
 }

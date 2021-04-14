@@ -9,7 +9,11 @@
     position: relative;
 
     &::before {
-      .setBg(0, false, false, -2px, 74, 74, "../img/hit-ribbon.png");
+      .setBg(18px, false, false, -27px, 61, 0);
+      border-right: 24px solid transparent;
+      border-bottom: 24px solid @brightColor;
+      border-left: 24px solid transparent;
+      transform: rotate(-45deg);
     }
 
     &::after {
@@ -18,15 +22,15 @@
       transform: translateX(-8px) translateY(10px) rotate(-45deg);
     }
   }
+}
 
-  .price-package__name {
-    margin: 0 0 10px;
-    font-size: 16px;
-  }
+.price-package__name {
+  margin: 0 0 10px;
+  font-size: 16px;
+}
 
-  .price-package__value {
-    margin: 0;
-    font-size: 18px;
-    font-weight: 300;
-  }
+.price-package__value {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 300;
 }
