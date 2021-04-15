@@ -1,0 +1,31 @@
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: @baseColor;
+
+  &--closed {
+    position: sticky;
+    background-color: rgba(@darkColor, 0.3);
+
+    .header__logo {
+      padding: 22px 20px 21px;
+    }
+  }
+
+  &--opened {
+    .header__logo {
+      padding: 22px 20px 21px 20px;
+    }
+  }
+}
+
+.header__logo {
+  display: inline-flex;
+  flex: 1 0 auto;
+  padding: 23px 20px;
+
+  &:focus {
+    outline: 1px dashed @lightColor;
+    outline-offset: -1px;
+  }
+}

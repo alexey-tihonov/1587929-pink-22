@@ -1,0 +1,19 @@
+.map {
+  position: relative;
+  max-width: 320px;
+  min-height: 200px;
+  margin: 0 auto;
+  background: url("../img/map-mobile.jpg") no-repeat;
+  background-size: cover;
+
+  &::before {
+    .setBg(0, false, false, false, 0, 0);
+    border-left: 160px solid transparent;
+    border-right: 160px solid transparent;
+    border-top: 33px solid @lightColor;
+  }
+
+  &::after {
+    .setBg(calc(50% - 5px), false, false, calc(50% - 18px), 36, 36, "../img/icons/map-marker.svg");
+  }
+}
