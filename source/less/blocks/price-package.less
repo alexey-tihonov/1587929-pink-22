@@ -9,7 +9,7 @@
     position: relative;
 
     &::before {
-      .setBg(18px, false, false, -27px, 61, 0);
+      .setBg("", 18px, false, false, -27px, 61, 0);
       border-right: 24px solid transparent;
       border-bottom: 24px solid @brightColor;
       border-left: 24px solid transparent;
@@ -17,7 +17,7 @@
     }
 
     &::after {
-      .setBg(12px, false, false, 22px, false, false, false, "ХИТ");
+      .setBg("ХИТ", 12px, false, false, 22px, false, false, false);
       font-weight: normal;
       transform: translateX(-8px) translateY(10px) rotate(-45deg);
     }
