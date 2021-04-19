@@ -1,0 +1,173 @@
+.post-form {
+  padding: 20px 20px 42px;
+  background-color: @bgPrimaryColor;
+}
+
+.post-form__photo {
+  display: block;
+}
+
+.post-form__filters {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  max-width: 240px;
+  width: 100%;
+  margin: 32px auto 39px;
+  padding: 0 0 58px;
+  list-style: none;
+
+  &::after {
+    .setBg("", false, false, 0, -40px, 320, 1);
+    background-color: rgba(@baseColor, 0.1);
+  }
+}
+
+.post-form__filter {
+  margin: 10px 17.5px;
+  box-sizing: border-box;
+}
+
+.post-form__tool {
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+  &--size {
+    width: 44px;
+    height: 44px;
+  }
+
+  &--fill {
+    width: 48px;
+    height: 43px;
+  }
+
+  &--brightness {
+    width: 32px;
+    height: 32px;
+  }
+
+  &--active {
+    pointer-events: none;
+
+    .post-form__tool-icon {
+      fill: @brightColor;
+
+      &:hover {
+        fill: @brightColor;
+      }
+    }
+  }
+
+  &:focus {
+    outline: 1px dashed;
+    outline-offset: 5px;
+  }
+
+  &:hover {
+    .post-form__tool-icon {
+      fill: rgba(@baseColor, 0.5);
+    }
+  }
+}
+
+.post-form__tool-icon {
+  fill: rgba(@baseColor, 0.3);
+}
+
+.post-form__control {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+
+  &--fill {
+    display: none;
+  }
+
+  &--brightness {
+    display: none;
+  }
+}
+
+.post-form__control-bar {
+  position: absolute;
+  bottom: 34px;
+  width: 100%;
+  height: 2px;
+  background: @baseColor;
+}
+
+.post-form__control-button {
+  position: absolute;
+  bottom: 27px;
+  width: 14px;
+  height: 14px;
+  padding: 0;
+  background-color: @lightColor;
+  border: 2px solid @brightColor;
+  border-radius: 50%;
+  transform: translateX(192px);
+  cursor: pointer;
+
+  &:focus {
+    outline: 1px dashed;
+    outline-offset: 2px;
+  }
+}
+
+.post-form__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 280px;
+  width: 100%;
+  padding: 15.5px 20px;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 18px;
+  color: @brightColor;
+  border: 3px solid @brightColor;
+  border-radius: 30px;
+  box-sizing: border-box;
+  cursor: pointer;
+
+  &:hover {
+    background-color: @brightColor;
+    color: @lightColor;
+  }
+
+  &:active {
+    background-color: @brightColor;
+    color: rgba(@lightColor, 0.3);
+  }
+
+  &--submit {
+    margin-bottom: 12px;
+  }
+
+  &--reset {
+    color: rgba(@baseColor, 0.1);
+    border-color: rgba(@baseColor, 0.1);
+
+    &:hover {
+      background-color: transparent;
+      color: rgba(@baseColor, 0.3);
+      border-color: rgba(@baseColor, 0.3);
+    }
+
+    &:active {
+      background-color: rgba(@baseColor, 0.3);
+      color: rgba(@lightColor, 0.3);
+      border-color: transparent;
+    }
+  }
+
+  &:focus {
+    outline: 0;
+  }
+}
