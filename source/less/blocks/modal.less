@@ -1,0 +1,64 @@
+.modal {
+  display: none;
+  width: 100%;
+  max-width: 460px;
+  font-size: 18px;
+  line-height: 24px;
+  text-align: center;
+  padding: 49px 80px 52px;
+  background: @lightColor;
+  box-shadow: 0 7px 15px rgba(0, 1, 1, 0.15);
+  border-radius: 5px;
+  transform: translate(-50%, -50%);
+  box-sizing: border-box;
+  z-index: 10;
+
+  &--error {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+  }
+
+  &--success {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    padding: 49px 74px 0;
+
+    .modal__message {
+      margin-bottom: 30px;
+    }
+  }
+}
+
+.modal__title {
+  margin: 0 0 22px;
+  padding: 0 30px;
+  color: @darkColor;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 40px;
+}
+
+.modal__message {
+  margin: 0 auto 33px;
+}
+
+.modal__button-wrapper {
+  margin: 0 -75px;
+  padding: 50px 82px 50px 83px;
+  background-color: @bgPrimaryColor;
+}
+
+.modal__button {
+  width: 100%;
+  margin: 0 auto;
+  padding: 19.5px 20px;
+  font-size: 18px;
+  font-weight: 700;
+  color: @lightColor;
+  background-color: @btnColor;
+  border: 2px solid @btnColor;
+  border-radius: 4px;
+  text-transform: uppercase;
+}
