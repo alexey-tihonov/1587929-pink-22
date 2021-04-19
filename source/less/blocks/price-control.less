@@ -1,12 +1,15 @@
 .price-control {
   width: 12px;
   height: 12px;
-  margin: 0 6.5px;
   padding: 0;
   border-radius: 50%;
   background-color: rgba(@baseColor, 0.3);
   border: 3px solid @bgPrimaryColor;
   cursor: pointer;
+
+  &--type-button {
+    margin: 0 6.5px;
+  }
 
   &--current {
     background-color: @lightColor;
