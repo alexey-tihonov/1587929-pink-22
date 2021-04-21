@@ -2,14 +2,50 @@
   padding: 41px 20px 11px;
   text-align: center;
   line-height: 30px;
+
+  @media (min-width: @bpTablet) {
+    padding-bottom: 12px;
+  }
+
+  @media (min-width: @bpDesktop) {
+    padding: 185px 130px 34px;
+  }
 }
 
 .reviews__text {
   margin: 11px 0 13px;
+
+  @media (min-width: @bpTablet) {
+    margin-bottom: 36px;
+    font-size: 18px;
+    order: 1;
+  }
+
+  @media (min-width: @bpDesktop) {
+    max-width: 688px;
+    width: 100%;
+    margin: 0 auto 36px;
+  }
+}
+
+.reviews__list {
+  position: relative;
+
+  @media (min-width: @bpDesktop) {
+    &::before {
+      .setBg("", -114px, 0, 0, 0, 79, 63, "../img/icons/quotes.svg");
+      margin: 0 auto;
+    }
+  }
 }
 
 .reviews__item {
   margin: 0;
+
+  @media (min-width: @bpTablet) {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .reviews__author-name {
@@ -17,20 +53,83 @@
   font-style: normal;
   font-weight: 700;
   color: @darkColor;
+
+  @media (min-width: @bpTablet) {
+    order: 2;
+  }
 }
 
 .reviews__author-desc {
   display: none;
+
+  @media (min-width: @bpTablet) {
+    display: block;
+    order: 3;
+  }
+
+  @media (min-width: @bpDesktop) {
+    padding-top: 2px;
+  }
 }
 
 .reviews__buttons {
   display: none;
+
+  @media (min-width: @bpDesktop) {
+    display: block;
+  }
+}
+
+.reviews__button {
+  position: absolute;
+  top: 30px;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+  &:hover {
+    .reviews__button-icon {
+      fill: rgba(@baseColor, 0.6);
+    }
+  }
+
+  &:focus {
+    outline: 1px dashed @baseColor;
+    outline-offset: 2px;
+  }
+
+  &:active {
+    .reviews__button-icon {
+      fill: rgba(@baseColor, 0.1);
+    }
+  }
+
+  &--prev {
+    left: 0;
+  }
+
+  &--next {
+    right: 0;
+  }
+}
+
+.reviews__button-icon {
+  fill: rgba(@baseColor, 0.3);
 }
 
 .reviews__toggles {
   display: flex;
   justify-content: center;
   margin: 31px 0 20px;
+
+  @media (min-width: @bpTablet) {
+    margin: 35px 0 0;
+  }
+
+  @media (min-width: @bpDesktop) {
+    display: none;
+  }
 }
 
 .reviews__toggle {

@@ -2,10 +2,24 @@
   position: relative;
   padding: 66px 0 277px;
 
+  @media (min-width: @bpTablet) {
+    padding-top: 50px;
+    padding-bottom: 0;
+  }
+
   &::before {
     .setBg("", 0, 0, -20px, 0);
     background-color: @bgPrimaryColor;
     transform: skewY(-6deg);
     z-index: -1;
+
+    @media (min-width: @bpTablet) {
+      bottom: -68px;
+      transform: skewY(-4.5deg);
+    }
+
+    @media (min-width: @bpDesktop) {
+      transform: skewY(-4.75deg);
+    }
   }
 }

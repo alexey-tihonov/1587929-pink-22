@@ -9,6 +9,10 @@
 
 .social__item {
   margin: 10px 4px;
+
+  @media (min-width: @bpDesktop) {
+    margin: 10px 2.5px;
+  }
 }
 
 .social__item-link {
@@ -34,6 +38,12 @@
 
     .social__item-logo {
       opacity: 0.3;
+    }
+  }
+
+  &--youtube {
+    .social__item-logo {
+      padding-left: 4px;
     }
   }
 }

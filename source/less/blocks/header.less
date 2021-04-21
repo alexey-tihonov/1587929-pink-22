@@ -2,17 +2,26 @@
   display: flex;
   flex-wrap: wrap;
   background-color: @baseColor;
+  box-sizing: border-box;
 
   &--closed {
     position: absolute;
     top: 0;
-    max-width: 320px;
+    .resize(max-width, 320, 660, 1200);
     width: 100%;
     background-color: rgba(@darkColor, 0.3);
     z-index: 10;
 
     .header__logo {
       padding: 22px 20px 21px;
+
+      @media (min-width: @bpTablet) {
+        padding: 27px 20px 43px;
+      }
+
+      @media (min-width: @bpDesktop) {
+        padding: 27px 0 43px;
+      }
     }
   }
 
@@ -20,6 +29,21 @@
     .header__logo {
       padding: 22px 20px 21px 20px;
     }
+
+    @media (min-width: @bpTablet) {
+      padding: 27px 20px 43px;
+    }
+
+    @media (min-width: @bpDesktop) {
+      padding: 27px 0 43px;
+    }
+  }
+
+  @media (min-width: @bpDesktop) {
+    display: flex;
+    align-items: center;
+    padding: 0 130px;
+    background-color: rgba(@darkColor, 0.3);
   }
 }
 
@@ -31,5 +55,26 @@
   &:focus {
     outline: 1px dashed @lightColor;
     outline-offset: -1px;
+  }
+
+  @media (min-width: @bpTablet) {
+    padding: 27px 20px 43px;
+  }
+
+  @media (min-width: @bpDesktop) {
+    padding: 27px 0 43px;
+  }
+}
+
+.header__logo-img {
+  display: block;
+
+  @media (min-width: @bpTablet) {
+    width: 145px;
+    height: 40px;
+  }
+
+  @media (min-width: @bpDesktop) {
+    width: 147px;
   }
 }
