@@ -1,5 +1,24 @@
 .promo {
-  padding-top: 66px;
+  position: relative;
+  .resize(padding-top, 66, 110);
   background: @baseColor url("../img/bg-back-mobile.jpg") no-repeat;
   color: @lightColor;
+
+  &--with-bg {
+    z-index: 1;
+  }
+
+  @media (min-width: @bpTablet) {
+    min-height: 619px;
+    padding-right: 20px;
+    padding-left: 20px;
+    background: @baseColor url("../img/bg-back-tablet.jpg") no-repeat;
+  }
+
+  @media (min-width: @bpDesktop) {
+    min-height: 743px;
+    padding-right: 130px;
+    padding-left: 130px;
+    background: @baseColor url("../img/bg-back-desktop.jpg") no-repeat;
+  }
 }

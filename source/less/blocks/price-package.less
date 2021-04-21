@@ -2,8 +2,31 @@
   padding: 19px 20px 35px;
   background: @baseColor;
   color: @lightColor;
-  border-top-left-radius: 3px;
+  border-top-left-radius: 4px;
   line-height: 1;
+
+  @media (min-width: @bpTablet) {
+    padding-top: 20px;
+    padding-bottom: 15px;
+    border-right: 1px solid @lightColor;
+    border-left: 1px solid @lightColor;
+    border-radius: 0;
+
+    &:nth-child(2) {
+      border-left: 2px solid @baseColor;
+      border-top-left-radius: 4px;
+    }
+
+    &:last-child {
+      border-right: 2px solid @baseColor;
+      border-top-right-radius: 4px;
+    }
+  }
+
+  @media (min-width: @bpDesktop) {
+    padding-top: 22px;
+    padding-bottom: 25px;
+  }
 
   &--hit {
     position: relative;
@@ -14,23 +37,48 @@
       border-bottom: 24px solid @brightColor;
       border-left: 24px solid transparent;
       transform: rotate(-45deg);
+
+      @media (min-width: @bpTablet) {
+        top: 14px;
+        left: -18px;
+        width: 46px;
+        border-width: 18px;
+      }
+
+      @media (min-width: @bpDesktop) {
+        top: 17px;
+        left: -23px;
+        width: 58px;
+        border-width: 23px;
+      }
     }
 
     &::after {
       .setBg("ХИТ", 12px, false, false, 22px, false, false);
+      font-size: 14px;
       font-weight: normal;
       transform: translateX(-8px) translateY(10px) rotate(-45deg);
+
+      @media (min-width: @bpTablet) {
+        top: 8px;
+        left: 15px;
+      }
+
+      @media (min-width: @bpDesktop) {
+        top: 13px;
+        left: 22px;
+      }
     }
   }
 }
 
 .price-package__name {
   margin: 0 0 10px;
-  font-size: 16px;
+  .resize(font-size, 16, 16, 18);
 }
 
 .price-package__value {
   margin: 0;
-  font-size: 18px;
+  .resize(font-size, 18, 18, 24);
   font-weight: 300;
 }

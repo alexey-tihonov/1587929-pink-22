@@ -3,10 +3,30 @@
   padding-top: 107px;
   overflow: hidden;
 
+  @media (min-width: @bpTablet) {
+    padding: 100px 20px 68px;
+  }
+
+  @media (min-width: @bpDesktop) {
+    padding: 156px 128px 94px;
+  }
+
   &::before {
     .setBg("", 15px, 0, -15px, 0);
     background-color: @bgPrimaryColor;
     transform: skewY(-3deg);
     z-index: -1;
+
+    @media (min-width: @bpTablet) {
+      top: 22px;
+      bottom: -22px;
+      transform: skewY(-3.5deg);
+    }
+
+    @media (min-width: @bpDesktop) {
+      top: 50px;
+      bottom: -50px;
+      transform: skewY(-4.75deg);
+    }
   }
 }

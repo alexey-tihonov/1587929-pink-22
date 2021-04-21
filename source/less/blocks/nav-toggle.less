@@ -32,6 +32,10 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
+
+    @media (min-width: @bpDesktop) {
+      display: none;
+    }
   }
 
   .nav-toggle__icon {
@@ -50,6 +54,10 @@
 
   .nav-toggle__icon {
     &--open {
+      display: none;
+    }
+
+    @media (min-width: @bpDesktop) {
       display: none;
     }
   }

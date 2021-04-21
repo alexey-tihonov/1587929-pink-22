@@ -3,19 +3,34 @@
   background-color: @bgBaseColor;
   text-align: center;
   font-weight: 300;
+  box-sizing: border-box;
+
+  @media (min-width: @bpTablet) {
+    max-width: 300px;
+    width: 100%;
+    padding: 10px 0 21px;
+    background-color: transparent;
+  }
+
+  @media (min-width: @bpDesktop) {
+    padding-top: 15px;
+  }
 }
 
 .promo-content__button {
   display: inline-flex;
-  margin-bottom: 33px;
+  justify-content: center;
+  width: 100%;
+  .resize(margin-bottom, 33, 45);
   padding: 16px 35px 16px 36px;
   border: 3px solid @lightColor;
   border-radius: 29px;
   color: inherit;
   font-weight: bold;
-  font-size: 18px;
+  .resize(font-size, 18, 18, 21);
   line-height: 18px;
   text-decoration: none;
+  box-sizing: border-box;
 
   &:hover {
     background-color: @lightColor;
@@ -30,8 +45,23 @@
   &:active {
     color: rgba(@brightColor, 0.3);
   }
+
+  @media (min-width: @bpDesktop) {
+    margin-bottom: 68px;
+    padding: 16px 28px 16px 29px;
+  }
 }
 
 .promo-content__text {
   margin: 4px auto 10px;
+
+  @media (min-width: @bpTablet) {
+    margin-top: 16px;
+    font-size: 18px;
+  }
+
+  @media (min-width: @bpDesktop) {
+    margin-top: 33px;
+    line-height: 24px;
+  }
 }

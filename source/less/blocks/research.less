@@ -1,0 +1,49 @@
+.research {
+  position: relative;
+  display: none;
+
+  .resetMargin;
+
+  &::before {
+    .setBg("", 54px, 0, 0, 20px, 238, 276, "../img/icons/timer.svg");
+    background-size: contain;
+
+    @media (min-width: @bpDesktop) {
+      top: 17px;
+      left: 130px;
+      width: 298px;
+      height: 345px;
+    }
+  }
+
+  &::after {
+    .setBg("24", 110px, 0, 0, 38px, 170, 170);
+    .resize(font-size, 96, 96, 120);
+    font-weight: 700;
+    line-height: 163px;
+    text-align: center;
+    background-color: @lightColor;
+    color: @brightColor;
+    border: 16px solid @brightColor;
+    border-radius: 50%;
+
+    @media (min-width: @bpDesktop) {
+      top: 88px;
+      left: 154px;
+      width: 218px;
+      height: 218px;
+      line-height: 212px;
+      background-color: @bgPrimaryColor;
+    }
+  }
+
+  @media (min-width: @bpTablet) {
+    display: block;
+    padding: 96px 0 70px 50%;
+  }
+
+  @media (min-width: @bpDesktop) {
+    padding: 112px 130px 112px 499px;
+    background-color: @bgPrimaryColor;
+  }
+}

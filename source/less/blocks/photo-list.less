@@ -12,8 +12,7 @@
     .photo-list__item-link {
       position: relative;
       display: block;
-      margin-left: -20px;
-      margin-right: -20px;
+      margin: 0;
 
       &::after {
         .setBg("ПАНОРАМА ДНЯ", 0, 20px, false, false, 140, 36);
@@ -46,6 +45,9 @@
 }
 
 .photo-list__item-link {
+  display: block;
+  margin: 0 20px;
+
   &:focus {
     outline-offset: -1px;
   }
@@ -58,6 +60,7 @@
 .photo__caption {
   display: flex;
   flex-wrap: wrap;
+  margin: 0 20px;
   padding: 18px 10px 23px 17px;
   background: @bgPrimaryColor;
 }

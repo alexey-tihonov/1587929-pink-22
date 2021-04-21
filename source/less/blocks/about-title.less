@@ -1,13 +1,25 @@
 .about-title {
   padding: 41px 20px 17px;
-  .resize(font-size, 24, 50, 50);
+  .resize(font-size, 24, 40, 50);
   font-weight: 300;
   .resize(line-height, 28.8, 54.47, 68.09);
 
   .resetMargin;
+
+  @media (min-width: @bpTablet) {
+    padding: 47px 20px 55px;
+  }
+
+  @media (min-width: @bpDesktop) {
+    padding: 62px 20px 100px;
+  }
 }
 
 .about-title__text {
   display: inline-block;
-  margin-bottom: 31px;
+  .resize(margin-bottom, 21, 0);
+
+  @media (min-width: @bpTablet) {
+    white-space: pre-line;
+  }
 }
