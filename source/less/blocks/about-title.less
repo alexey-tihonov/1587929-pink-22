@@ -1,5 +1,5 @@
 .about-title {
-  padding: 41px 20px 17px;
+  padding: 41px 20px 0;
   .resize(font-size, 24, 40, 50);
   font-weight: 300;
   .resize(line-height, 28.8, 54.47, 68.09);
@@ -7,19 +7,21 @@
   .resetMargin;
 
   @media (min-width: @bpTablet) {
-    padding: 47px 20px 55px;
+    padding: 47px 20px 28px;
   }
 
   @media (min-width: @bpDesktop) {
-    padding: 62px 20px 100px;
+    padding: 62px 20px 51px;
   }
 }
 
 .about-title__text {
-  display: inline-block;
-  .resize(margin-bottom, 21, 0);
+  display: block;
+  .resize(max-width, 280, 620, 940);
+  margin: 0 auto 31px;
 
   @media (min-width: @bpTablet) {
+    margin-bottom: 0;
     white-space: pre-line;
   }
 }

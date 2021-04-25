@@ -2,6 +2,17 @@
   min-height: 96px;
   padding: 96px 20px 45px;
   background: @baseColor url("../img/bg-back-mobile.jpg") no-repeat;
+  background-size: 100%;
   color: @lightColor;
   text-align: center;
+
+  @media (min-width: @bpTablet) {
+    padding-top: 178px;
+    padding-bottom: 59px;
+  }
+
+  @media (min-width: @bpDesktop) {
+    padding-top: 168px;
+    padding-bottom: 90px;
+  }
 }

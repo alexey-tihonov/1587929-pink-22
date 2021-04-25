@@ -1,14 +1,15 @@
 .reviews {
-  padding: 41px 20px 11px;
+  padding: 40px 20px 18px;
   text-align: center;
   line-height: 30px;
 
   @media (min-width: @bpTablet) {
-    padding-bottom: 12px;
+    padding: 42px 20px 14px;
+    background-color: transparent;
   }
 
   @media (min-width: @bpDesktop) {
-    padding: 185px 130px 34px;
+    padding: 185px 130px 33px;
   }
 }
 
@@ -31,9 +32,18 @@
 .reviews__list {
   position: relative;
 
+  @media (min-width: @bpTablet) {
+    display: flex;
+    flex-direction: column;
+    max-width: 620px;
+    margin: 0 auto;
+  }
+
   @media (min-width: @bpDesktop) {
+    max-width: 940px;
+
     &::before {
-      .setBg("", -114px, 0, 0, 0, 79, 63, "../img/icons/quotes.svg");
+      .setBg("", -112px, 0, 0, 0, 79, 63, "../img/icons/quotes.svg");
       margin: 0 auto;
     }
   }
@@ -121,7 +131,7 @@
 .reviews__toggles {
   display: flex;
   justify-content: center;
-  margin: 31px 0 20px;
+  margin: 30px 0 20px;
 
   @media (min-width: @bpTablet) {
     margin: 35px 0 0;

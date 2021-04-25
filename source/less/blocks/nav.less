@@ -8,7 +8,8 @@
   background-color: inherit;
 
   @media (min-width: @bpDesktop) {
-    flex: 0 1 auto;
+    flex: 1 0 auto;
+    max-width: 813px;
     font-weight: 400;
     line-height: 18px;
     text-transform: none;
@@ -28,6 +29,7 @@
     flex-wrap: wrap;
     flex-direction: row;
     align-items: center;
+    justify-content: flex-end;
     border: none;
   }
 }
@@ -42,14 +44,7 @@
 
     &:first-child {
       .nav__item-link {
-        padding-left: 0;
-        padding-right: 38.5px;
-      }
-    }
-
-    &:last-child {
-      .nav__item-link {
-        padding-right: 0;
+        padding-right: 39px;
       }
     }
   }
@@ -75,9 +70,8 @@
     }
   }
 
-
   @media (min-width: @bpDesktop) {
-    padding: 15px 39.5px;
+    padding: 13px 40px 15px;
   }
 }
 

@@ -1,8 +1,7 @@
 .price-package {
-  padding: 19px 20px 35px;
+  padding: 18px 20px 36px;
   background: @baseColor;
   color: @lightColor;
-  border-top-left-radius: 4px;
   line-height: 1;
 
   @media (min-width: @bpTablet) {
@@ -10,7 +9,6 @@
     padding-bottom: 15px;
     border-right: 1px solid @lightColor;
     border-left: 1px solid @lightColor;
-    border-radius: 0;
 
     &:nth-child(2) {
       border-left: 2px solid @baseColor;
@@ -32,17 +30,17 @@
     position: relative;
 
     &::before {
-      .setBg("", 18px, false, false, -27px, 61, 0);
+      .setBg("", 17px, false, false, -27px, 60, 0);
       border-right: 24px solid transparent;
       border-bottom: 24px solid @brightColor;
       border-left: 24px solid transparent;
       transform: rotate(-45deg);
 
       @media (min-width: @bpTablet) {
-        top: 14px;
-        left: -18px;
-        width: 46px;
-        border-width: 18px;
+        top: 13px;
+        left: -19px;
+        width: 45px;
+        border-width: 19px;
       }
 
       @media (min-width: @bpDesktop) {

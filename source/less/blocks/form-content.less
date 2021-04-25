@@ -1,6 +1,22 @@
 .form-content {
-  padding: 0 20px;
+  padding: 0;
   color: @brightColor;
+  font-size: 14px;
   text-transform: uppercase;
   text-align: center;
+
+  .centered;
+
+  @media (min-width: @bpTablet) {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    max-width: 620px;
+    padding: 0 20px;
+  }
+
+  @media (min-width: @bpDesktop) {
+    max-width: 940px;
+    padding-top: 79px;
+  }
 }
