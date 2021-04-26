@@ -17,7 +17,7 @@
   flex-wrap: wrap;
   .resize(max-width, 280, 502, 375);
   width: 100%;
-  margin: 0 auto 17px;
+  margin: 0 auto 18px;
   color: @brightColor;
   text-transform: uppercase;
   text-indent: 23px;
@@ -95,7 +95,7 @@
       position: relative;
       display: flex;
       align-items: center;
-      min-height: 37px;
+      min-height: 41px;
       padding-left: 59px;
       font-size: 18px;
       color: @baseColor;
@@ -148,7 +148,7 @@
       position: relative;
       display: flex;
       align-items: center;
-      min-height: 37px;
+      min-height: 41px;
       padding-left: 70px;
       font-size: 18px;
       color: @baseColor;
@@ -347,17 +347,17 @@
   }
 
   &--completed {
-    padding: 39px 0 44px;
+    padding: 39px 0 42px;
     background-color: @bgPrimaryColor;
 
     @media (min-width: @bpTablet) {
       margin-bottom: 65px;
-      padding: 52px 0 50px;
+      padding: 52px 0 48px;
       background-color: transparent;
     }
 
     @media (min-width: @bpDesktop) {
-      padding-bottom: 12px;
+      padding-bottom: 8px;
     }
 
     .form__fieldset-text {
@@ -377,7 +377,8 @@
     }
 
     .form__fieldset-item {
-      margin-bottom: 45px;
+      margin-bottom: 41px;
+      overflow: hidden;
 
       &:last-child {
         margin-bottom: 0;
@@ -398,7 +399,7 @@
   }
 
   &--contacts {
-    padding: 32px 0 42px;
+    padding: 31px 0 42px;
 
     @media (min-width: @bpTablet) {
       margin-bottom: 66px;
@@ -483,7 +484,7 @@
 
     @media (min-width: @bpTablet) {
       margin-bottom: 66px;
-      padding: 53px 0 55px;
+      padding: 51px 0 52px;
       background-color: transparent;
       order: -2;
     }
@@ -492,7 +493,6 @@
       flex-basis: 431px;
       margin-right: 0;
       margin-bottom: 64px;
-      padding-bottom: 57px;
     }
 
     .form__fieldset-list {
@@ -502,20 +502,25 @@
     }
 
     .form__fieldset-item {
-      margin-bottom: 38px;
+      margin-bottom: 34px;
+      overflow: hidden;
 
       &:last-child {
         margin-bottom: 0;
       }
+
+      @media (min-width: @bpDesktop) {
+        margin-bottom: 35px;
+      }
     }
 
     .form__fieldset-text {
-      margin-bottom: 44px;
+      margin-bottom: 34px;
     }
   }
 
   &--comment {
-    padding: 39px 0 38px;
+    padding: 36px 0 38px;
 
     @media (min-width: @bpTablet) {
       margin-bottom: 65px;
