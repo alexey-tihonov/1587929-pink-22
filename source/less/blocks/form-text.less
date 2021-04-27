@@ -1,5 +1,18 @@
 .form-text {
+  .resize(max-width, 280, 490, 800);
   padding: 0 20px;
 
-  .resetMargin;
+  .centered;
+
+  @media (min-width: @bpTablet) {
+    font-size: 18px;
+  }
+}
+
+.form-text__prompt {
+  display: none;
+
+  @media (min-width: @bpTablet) {
+    display: inline-block;
+  }
 }

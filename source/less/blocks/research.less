@@ -2,22 +2,22 @@
   position: relative;
   display: none;
 
-  .resetMargin;
+  .centered;
 
   &::before {
-    .setBg("", 54px, 0, 0, 20px, 238, 276, "../img/icons/timer.svg");
+    .setBg("", 54px, false, 0, calc(50% - 310px), 238, 276, "../img/icons/timer.svg");
     background-size: contain;
 
     @media (min-width: @bpDesktop) {
       top: 17px;
-      left: 130px;
+      left: calc(50% - 470px);
       width: 298px;
       height: 345px;
     }
   }
 
   &::after {
-    .setBg("24", 110px, 0, 0, 38px, 170, 170);
+    .setBg("24", 110px, false, 0, calc(50% - 291px), 170, 170);
     .resize(font-size, 96, 96, 120);
     font-weight: 700;
     line-height: 163px;
@@ -28,22 +28,23 @@
     border-radius: 50%;
 
     @media (min-width: @bpDesktop) {
-      top: 88px;
-      left: 154px;
+      top: 86px;
+      left: calc(50% - 447px);
       width: 218px;
       height: 218px;
       line-height: 212px;
       background-color: @bgPrimaryColor;
+      border-width: 18px;
     }
   }
 
   @media (min-width: @bpTablet) {
     display: block;
-    padding: 96px 0 70px 50%;
+    padding: 95px 24px 70px 50%;
   }
 
   @media (min-width: @bpDesktop) {
-    padding: 112px 130px 112px 499px;
+    padding: 112px 24px 111px calc(50% - 100px);
     background-color: @bgPrimaryColor;
   }
 }

@@ -1,14 +1,20 @@
 .content-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  .resize(max-width, 280, 620, 1200);
   padding: 0 20px;
   list-style: none;
-  background-color: @bgPrimaryColor;
 
-  .resetMargin;
+  .centered;
+
+  @media (min-width: @bpTablet) {
+    position: relative;
+    flex-direction: column;
+  }
 
   @media (min-width: @bpDesktop) {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    flex-direction: row;
     padding: 0 110px;
   }
 }
@@ -20,43 +26,38 @@
 
   @media (min-width: @bpDesktop) {
     margin-bottom: 22px;
-    white-space: pre-line;
   }
 }
 
 .content-list__item-text {
-  margin: 0 0 31px;
-
-  @media (min-width: @bpTablet) {
-    margin-bottom: 35px;
-    white-space: pre-line;
-
-    &:first-child {
-      margin-bottom: 34px;
-    }
-  }
+  margin: 0;
 
   @media (min-width: @bpDesktop) {
     padding-right: 26px;
     padding-left: 26px;
-    white-space: normal;
   }
 }
 
 .content-list__item {
+  margin: 0 0 31px;
+
   &:first-child {
     &::before {
       @media (min-width: @bpDesktop) {
-        .setBg("", -93px, 7px, false, 0, 186, 300, "../img/iphone-screen-1-desktop.png");
+        .setBg("", 0, 7px, false, 0, 186, 300, "../img/iphone-screen-1-desktop.png");
         margin: auto;
       }
+    }
+
+    @media (min-width: @bpTablet) {
+      margin-bottom: 34px;
     }
   }
 
   &:nth-child(2) {
     &::before {
       @media (min-width: @bpDesktop) {
-        .setBg("", -93px, 0, false, 0, 186, 300, "../img/iphone-screen-2-desktop.png");
+        .setBg("", 0, 0, false, 0, 186, 300, "../img/iphone-screen-2-desktop.png");
         margin: auto;
       }
     }
@@ -68,7 +69,7 @@
       margin: auto;
 
       @media (min-width: @bpTablet) {
-        top: -20px;
+        top: -70px;
         right: auto;
         bottom: auto;
         left: 20px;
@@ -78,7 +79,7 @@
       }
 
       @media (min-width: @bpDesktop) {
-        top: -93px;
+        top: 0;
         left: 7px;
         right: 0;
         width: 186px;
@@ -86,15 +87,12 @@
         background-image: url("../img/iphone-screen-3-desktop.png");
       }
     }
-
-    .content-list__item-text {
-      margin-bottom: 41px;
-    }
   }
 
   @media (min-width: @bpTablet) {
     max-width: 310px;
     width: 100%;
+    margin-bottom: 35px;
     margin-left: auto;
     text-align: left;
   }
@@ -103,7 +101,7 @@
     position: relative;
     max-width: 300px;
     margin: 0;
-    padding: 264px 10px 10px;
+    padding: 357px 10px 10px;
     text-align: center;
   }
 }

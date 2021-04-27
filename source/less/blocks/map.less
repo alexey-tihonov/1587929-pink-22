@@ -1,34 +1,28 @@
 .map {
   position: relative;
-  max-width: 320px;
   min-height: 200px;
   background: url("../img/map-mobile.jpg") no-repeat;
   background-size: cover;
   overflow: hidden;
 
-  .centered;
-
   &::before {
     .setBg("", 0, false, false, false, 0, 0);
-    border-left: 160px solid transparent;
-    border-right: 160px solid transparent;
+    border-left: 50vw solid transparent;
+    border-right: 50vw solid transparent;
     border-top: 33px solid @lightColor;
 
     @media (min-width: @bpTablet) {
-      border-left-width: 330px;
-      border-right-width: 330px;
       border-top-width: 68px;
     }
 
     @media (min-width: @bpDesktop) {
-      border-left-width: 600px;
-      border-right-width: 600px;
       border-top-width: 103px;
     }
   }
 
   &::after {
     .setBg("", calc(50% - 5px), false, false, calc(50% - 18px), 36, 36, "../img/icons/map-marker.svg");
+    background-size: cover;
 
     @media (min-width: @bpTablet) {
       top: calc(50% + 7px);
@@ -40,14 +34,14 @@
   }
 
   @media (min-width: @bpTablet) {
-    max-width: 660px;
     min-height: 374px;
     background: url("../img/map-tablet.jpg") no-repeat;
+    background-size: cover;
   }
 
   @media (min-width: @bpDesktop) {
-    max-width: 1200px;
     min-height: 502px;
     background: url("../img/map-desktop.jpg") no-repeat;
+    background-size: cover;
   }
 }

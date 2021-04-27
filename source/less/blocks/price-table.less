@@ -1,5 +1,5 @@
 .price-table {
-  width: calc(300% - 120px);
+  width: calc(300% - 116px);
   border-collapse: collapse;
   line-height: 30px;
   text-transform: uppercase;
@@ -15,9 +15,14 @@
 
   @media (min-width: @bpTablet) {
     table-layout: fixed;
+    max-width: 620px;
     width: 100%;
     border-collapse: separate;
     border-spacing: 0;
+  }
+
+  @media (min-width: @bpDesktop) {
+    max-width: 942px;
   }
 }
 

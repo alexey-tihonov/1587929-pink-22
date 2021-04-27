@@ -1,32 +1,28 @@
 .price {
   position: relative;
-  padding-top: 107px;
+  padding-top: 101px;
   overflow: hidden;
 
   @media (min-width: @bpTablet) {
-    padding: 100px 20px 68px;
+    padding: 98px 20px 68px;
   }
 
   @media (min-width: @bpDesktop) {
-    padding: 156px 128px 94px;
+    padding: 157px 128px 95px;
   }
 
   &::before {
-    .setBg("", 15px, 0, -15px, 0);
-    background-color: @bgPrimaryColor;
-    transform: skewY(-3deg);
+    .setBg("", 0, 0, 0, 0);
+    border-right: 100vw solid #f2f2f2;
+    border-top: 18px solid transparent;
     z-index: -1;
 
     @media (min-width: @bpTablet) {
-      top: 22px;
-      bottom: -22px;
-      transform: skewY(-3.5deg);
+      border-top-width: 42px;
     }
 
     @media (min-width: @bpDesktop) {
-      top: 50px;
-      bottom: -50px;
-      transform: skewY(-4.75deg);
+      border-top-width: 100px;
     }
   }
 }

@@ -7,10 +7,45 @@
   list-style: none;
 
   .resetMargin;
+
+  @media (min-width: @bpTablet) {
+    max-width: 296px;
+  }
+
+  @media (min-width: @bpDesktop) {
+    max-width: 303px;
+  }
 }
 
 .marketplace-list__item {
   margin: 0 17.5px 10px;
+
+  @media (min-width: @bpDesktop) {
+    margin: 0 18.5px 10px;
+  }
+
+  &--ios {
+    @media (min-width: @bpDesktop) {
+      margin-right: 15.5px;
+      margin-left: 15.5px;
+    }
+  }
+
+  &--android {
+    margin-bottom: 7px;
+  }
+
+  &--windows-phone {
+    margin-bottom: 2px;
+
+    @media (min-width: @bpTablet) {
+      margin-bottom: 7px;
+    }
+
+    @media (min-width: @bpDesktop) {
+      margin-bottom: 4px;
+    }
+  }
 }
 
 .marketplace-list__item-link {

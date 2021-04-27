@@ -1,15 +1,14 @@
 .modal {
   display: none;
+  .resize(max-width, false, 460, 780);
   width: 100%;
-  max-width: 460px;
+  padding: 41px 0 0;
   font-size: 18px;
   line-height: 24px;
   text-align: center;
-  padding: 49px 80px 52px;
   background: @lightColor;
   box-shadow: 0 7px 15px rgba(0, 1, 1, 0.15);
   border-radius: 5px;
-  box-sizing: border-box;
 
   &--error {
     position: fixed;
@@ -17,25 +16,45 @@
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 10;
+
+    .modal__message {
+      .resize(margin-bottom, false, 33, 63);
+    }
+
+    .modal__button-wrapper {
+      @media (min-width: @bpDesktop) {
+        background-color: @bgPrimaryColor;
+      }
+    }
+
+    .modal__button {
+      max-width: 300px;
+      .resize(margin-bottom, false, 52, 0);
+    }
   }
 
   &--success {
     position: fixed;
     top: 50%;
     left: 50%;
-    padding: 49px 74px 0;
     transform: translate(-50%, -50%);
     z-index: 10;
 
-    .modal__message {
-      margin-bottom: 30px;
+    .modal__button-wrapper {
+      padding: 50px 80px 50px 81px;
+      background-color: @bgPrimaryColor;
+
+      @media (min-width: @bpDesktop) {
+        padding: 50px 160px;
+      }
     }
   }
 }
 
 .modal__title {
-  margin: 0 0 22px;
-  padding: 0 30px;
+  .resize(max-width, false, 250, 400);
+  width: 100%;
+  margin: 0 auto 22px;
   color: @darkColor;
   font-size: 30px;
   font-weight: 700;
@@ -43,13 +62,19 @@
 }
 
 .modal__message {
-  margin: 0 auto 33px;
+  .resize(max-width, false, 320, 400);
+  width: 100%;
+  margin: 0 auto 30px;
+
+  @media (min-width: @bpDesktop) {
+    margin-bottom: 39px;
+  }
 }
 
 .modal__button-wrapper {
-  margin: 0 -75px;
-  padding: 50px 82px 50px 83px;
-  background-color: @bgPrimaryColor;
+  @media (min-width: @bpDesktop) {
+    padding: 50px 160px;
+  }
 }
 
 .modal__button {
@@ -63,4 +88,5 @@
   border: 2px solid @btnColor;
   border-radius: 4px;
   text-transform: uppercase;
+  box-sizing: border-box;
 }

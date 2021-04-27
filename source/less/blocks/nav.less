@@ -8,7 +8,8 @@
   background-color: inherit;
 
   @media (min-width: @bpDesktop) {
-    flex: 0 1 auto;
+    flex: 1 0 auto;
+    max-width: 813px;
     font-weight: 400;
     line-height: 18px;
     text-transform: none;
@@ -28,44 +29,52 @@
     flex-wrap: wrap;
     flex-direction: row;
     align-items: center;
+    justify-content: flex-end;
     border: none;
   }
 }
 
 .nav__item {
   display: flex;
+  padding: 14px 40px 16px;
   border-bottom: 1px solid @darkColor;
   border-top: 1px solid #485461;
 
+  &:first-child {
+    padding-right: 39px;
+  }
+
   @media (min-width: @bpDesktop) {
+    padding: 13px 40px 15px;
     border: none;
-
-    &:first-child {
-      .nav__item-link {
-        padding-left: 0;
-        padding-right: 38.5px;
-      }
-    }
-
-    &:last-child {
-      .nav__item-link {
-        padding-right: 0;
-      }
-    }
   }
 }
 
 .nav__item-link {
   width: 100%;
-  padding: 15px;
   color: @lightColor;
   text-decoration: none;
 
-  &--current {
+  &--active {
     cursor: default;
+    pointer-events: none;
+
+    @media (min-width: @bpDesktop) {
+      position: relative;
+
+      &::after {
+        .setBg("", false, false, -13px, 0, 100%, 2px);
+        background-color: #ffffff;
+      }
+    }
   }
 
-  &:not(.nav__item-link--current) {
+  &:focus {
+    outline: 1px dashed @lightColor;
+    outline-offset: 5px;
+  }
+
+  &:not(.nav__item-link--active) {
     &:hover {
       color: @brightColor;
     }
@@ -73,11 +82,6 @@
     &:active {
       opacity: 0.3;
     }
-  }
-
-
-  @media (min-width: @bpDesktop) {
-    padding: 15px 39.5px;
   }
 }
 

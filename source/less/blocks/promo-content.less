@@ -1,4 +1,6 @@
 .promo-content {
+  max-width: 660px;
+  width: 100%;
   padding: 28px 20px 21px;
   background-color: @bgBaseColor;
   text-align: center;
@@ -6,24 +8,29 @@
   box-sizing: border-box;
   order: 2;
 
+  .centered;
+
   @media (min-width: @bpTablet) {
-    max-width: 300px;
-    width: 100%;
-    padding: 10px 0 21px;
+    max-width: 100%;
+    width: 620px;
+    padding: 10px 300px 21px 0;
     background-color: transparent;
   }
 
   @media (min-width: @bpDesktop) {
+    width: 940px;
     padding-top: 15px;
+    padding-right: 620px;
   }
 }
 
 .promo-content__button {
   display: inline-flex;
   justify-content: center;
+  .resize(max-width, 280, 300);
   width: 100%;
-  .resize(margin-bottom, 33, 45);
-  padding: 16px 35px 16px 36px;
+  .resize(margin-bottom, 32, 45);
+  padding: 16px 25px 16px 26px;
   border: 3px solid @lightColor;
   border-radius: 29px;
   color: inherit;
@@ -47,6 +54,10 @@
     color: rgba(@brightColor, 0.3);
   }
 
+  @media (min-width: @bpTablet) {
+    margin-right: 20px;
+  }
+
   @media (min-width: @bpDesktop) {
     margin-bottom: 68px;
     padding: 16px 28px 16px 29px;
@@ -54,10 +65,12 @@
 }
 
 .promo-content__text {
+  .resize(max-width, 280, 300, 320);
   margin: 4px auto 10px;
 
   @media (min-width: @bpTablet) {
     margin-top: 16px;
+    margin-right: 20px;
     font-size: 18px;
   }
 

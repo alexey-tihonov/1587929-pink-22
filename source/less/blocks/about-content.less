@@ -1,25 +1,29 @@
 .about-content {
   position: relative;
-  padding: 66px 0 277px;
+  padding: 83px 0 288px;
+  overflow: hidden;
 
   @media (min-width: @bpTablet) {
-    padding-top: 50px;
-    padding-bottom: 0;
+    padding-top: 77px;
+    padding-bottom: 7px;
+  }
+
+  @media (min-width: @bpDesktop) {
+    padding-top: 6px;
   }
 
   &::before {
-    .setBg("", 0, 0, -20px, 0);
-    background-color: @bgPrimaryColor;
-    transform: skewY(-6deg);
+    .setBg("", 0, 0, 0, 0);
+    border-right: 100vw solid #f2f2f2;
+    border-top: 32px solid transparent;
     z-index: -1;
 
     @media (min-width: @bpTablet) {
-      bottom: -68px;
-      transform: skewY(-4.5deg);
+      border-top-width: 54px;
     }
 
     @media (min-width: @bpDesktop) {
-      transform: skewY(-4.75deg);
+      border-top-width: 98px;
     }
   }
 }
