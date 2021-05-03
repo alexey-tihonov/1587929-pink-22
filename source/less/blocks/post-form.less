@@ -148,6 +148,10 @@
   &--active {
     pointer-events: none;
 
+    @media (min-width: @bpTablet) {
+      pointer-events: all;
+    }
+
     .post-form__tool-icon {
       fill: @brightColor;
 
