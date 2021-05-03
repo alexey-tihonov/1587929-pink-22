@@ -1,7 +1,18 @@
 .post-text {
+  .resize(max-width, 280, 460);
   padding: 0 20px 42px;
   text-align: center;
   line-height: 30px;
 
-  .resetMargin;
+  .centered;
+
+
+  @media (min-width: @bpTablet) {
+    font-size: 18px;
+    padding-bottom: 70px;
+  }
+
+  @media (min-width: @bpDesktop) {
+    padding-bottom: 66px;
+  }
 }
