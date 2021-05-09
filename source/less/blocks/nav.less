@@ -69,6 +69,14 @@
     }
   }
 
+  &--main {
+    @media (min-width: @bpDesktop) {
+      &::after {
+        content: none;
+      }
+    }
+  }
+
   &:focus {
     outline: 1px dashed @lightColor;
     outline-offset: 5px;

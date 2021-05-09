@@ -125,6 +125,7 @@
       & + .form__label {
         &::before {
           background-image: url("../img/icons/check.svg");
+          background-size: 22px 16px;
           background-position: 6px 9px;
           background-repeat: no-repeat;
         }
@@ -163,7 +164,7 @@
 
       @media (min-width: @bpTablet) {
         flex-grow: 1;
-        max-width: 440px;
+        max-width: 500px;
         padding-left: 60px;
       }
     }
@@ -182,10 +183,10 @@
 
     &:checked {
       & + .form__label {
-        &::before {
-          background-image: url("../img/icons/marker.svg");
-          background-position: 11px 11px;
-          background-repeat: no-repeat;
+        &::after {
+          .setBg("", 13px, false, false, 13px, 15, 15);
+          background-color: @brightColor;
+          border-radius: 50%;
         }
       }
     }
@@ -316,7 +317,7 @@
 
     @media (min-width: @bpTablet) {
       margin-bottom: 24px;
-      padding-top: 71px;
+      padding-top: 72px;
       border: 0;
       order: -3;
     }
@@ -339,7 +340,13 @@
         }
 
         &:first-child {
-          margin-bottom: 54px;
+          margin-bottom: 51px;
+        }
+      }
+
+      @media (min-width: @bpDesktop) {
+        &:first-child {
+          margin-bottom: 53px;
         }
       }
     }
@@ -439,8 +446,8 @@
         flex-flow: column-reverse;
         align-items: stretch;
         text-align: left;
-        text-indent: 20px;
-        margin-bottom: 28px;
+        text-indent: 19px;
+        margin-bottom: 30px;
       }
 
       @media (min-width: @bpDesktop) {
@@ -451,8 +458,11 @@
     .form__label--phone {
       @media (min-width: @bpTablet) {
         &::after {
-          .setBg("", 2px, 2px, false, false, 59, 59, "../img/icons/phone.svg");
+          .setBg("", 2px, 2px, false, false, 59, 59);
           background-color: @bgSecondaryColor;
+          background-image: url("../img/icons/phone.svg");
+          background-size: 20px 19px;
+          background-repeat: no-repeat;
           background-position: center;
         }
       }
@@ -461,8 +471,11 @@
     .form__label--email {
       @media (min-width: @bpTablet) {
         &::after {
-          .setBg("", 2px, 2px, false, false, 59, 59, "../img/icons/email.svg");
+          .setBg("", 2px, 2px, false, false, 59, 59);
           background-color: @bgSecondaryColor;
+          background-image: url("../img/icons/email.svg");
+          background-size: 18px 13px;
+          background-repeat: no-repeat;
           background-position: center;
         }
       }
