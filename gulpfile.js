@@ -43,6 +43,12 @@ const html = () => {
     .pipe(gulp.dest("build"));
 };
 
+// Favicon
+const favicon = () => {
+  return gulp.src("source/*.ico")
+    .pipe(gulp.dest("build"));
+};
+
 // Scripts
 const scripts = () => {
   return gulp.src("source/js/*.js")
@@ -152,6 +158,7 @@ const build = gulp.series(
   gulp.parallel(
     styles,
     html,
+    favicon,
     scripts,
     sprite,
     createWebp
@@ -168,6 +175,7 @@ exports.default = gulp.series(
   gulp.parallel(
     styles,
     html,
+    favicon,
     scripts,
     sprite,
     createWebp
