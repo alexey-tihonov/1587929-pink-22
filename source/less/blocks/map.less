@@ -6,21 +6,6 @@
   overflow: hidden;
 
   &::before {
-    .setBg("", 0, false, false, false, 0, 0);
-    border-left: 50vw solid transparent;
-    border-right: 50vw solid transparent;
-    border-top: 33px solid @lightColor;
-
-    @media (min-width: @bpTablet) {
-      border-top-width: 68px;
-    }
-
-    @media (min-width: @bpDesktop) {
-      border-top-width: 103px;
-    }
-  }
-
-  &::after {
     .setBg("", calc(50% - 5px), false, false, calc(50% - 18px), 36, 36);
     background-color: @brightColor;
     border: 10px solid @lightColor;
@@ -33,6 +18,21 @@
 
     @media (min-width: @bpDesktop) {
       top: calc(50% + 13px);
+    }
+  }
+
+  &::after {
+    .setBg("", 0, false, false, false, 0, 0);
+    border-left: 50vw solid transparent;
+    border-right: 50vw solid transparent;
+    border-top: 33px solid @lightColor;
+
+    @media (min-width: @bpTablet) {
+      border-top-width: 68px;
+    }
+
+    @media (min-width: @bpDesktop) {
+      border-top-width: 103px;
     }
   }
 
