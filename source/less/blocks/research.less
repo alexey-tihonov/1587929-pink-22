@@ -48,3 +48,34 @@
     background-color: @bgPrimaryColor;
   }
 }
+
+.research__title {
+  .resize(max-width, false, 168, 298);
+  margin: 0;
+  font-size: 30px;
+  .resize(line-height, 36, 36, 30);
+}
+
+
+.research__text {
+  margin: 0;
+  padding: 10px 0;
+
+  @media (min-width: @bpTablet) {
+    max-width: 300px;
+  }
+
+  @media (min-width: @bpDesktop) {
+    max-width: 535px;
+    padding: 25px 0 30px;
+  }
+}
+
+
+.research__link {
+  color: @brightColor;
+
+  &:focus {
+    outline: 1px dashed @baseColor;
+  }
+}

@@ -40,6 +40,11 @@
     margin-bottom: 0;
   }
 
+  &--textarea {
+    .resize(max-width, 280, 500, 820);
+    width: 100%;
+  }
+
   @media (min-width: @bpTablet) {
     align-items: center;
     margin-bottom: 51px;
@@ -193,7 +198,6 @@
   }
 
   &--textarea {
-    .resize(max-width, 280, 500, 820);
     width: 100%;
     .resize(min-height, 201, 193, 128);
     padding: 14px 20px;
@@ -530,15 +534,15 @@
   }
 
   &--comment {
-    padding: 36px 0 38px;
+    padding: 36px 0 48px;
 
     @media (min-width: @bpTablet) {
       margin-bottom: 65px;
-      padding: 45px 0 42px;
+      padding: 45px 0 52px;
     }
 
     @media (min-width: @bpDesktop) {
-      padding: 42px 0 33px;
+      padding: 42px 0 43px;
     }
 
     .form__fieldset-text {

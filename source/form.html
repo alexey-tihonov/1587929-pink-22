@@ -105,11 +105,11 @@
         <p class="form__fieldset-text">Контактная информация</p>
         <label class="form__label form__label--phone" for="phone">
           Номер телефона
-          <input class="form__field form__field--input" type="text" name="phone" id="phone" placeholder="Номер, пожалуйста" />
+          <input class="form__field form__field--input" type="tel" name="phone" id="phone" placeholder="Номер, пожалуйста" />
         </label>
         <label class="form__label form__label--email" for="email">
           Адрес почты
-          <input class="form__field form__field--input" type="text" name="email" id="email" placeholder="Введите почту *" required />
+          <input class="form__field form__field--input" type="email" name="email" id="email" placeholder="Введите почту *" required />
         </label>
       </fieldset>
 
@@ -133,7 +133,9 @@
 
       <fieldset class="form__fieldset form__fieldset--comment">
         <p class="form__fieldset-text">Опишите свои эмоции</p>
-        <textarea class="form__field form__field--textarea" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
+        <label class="form__label form__label--textarea">
+          <textarea class="form__field form__field--textarea" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
+        </label>
       </fieldset>
 
       <button class="form__button" type="submit" aria-label="Отправить форму">Отправить форму</button>
