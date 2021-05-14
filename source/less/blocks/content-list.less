@@ -41,7 +41,7 @@
 .content-list__item {
   margin: 0 0 31px;
 
-  &:first-child {
+  &--mood {
     &::before {
       @media (min-width: @bpDesktop) {
         .setBg("", 0, 7px, false, 0, 186, 300, "../img/iphone-screen-1-desktop@1x.png");
@@ -59,7 +59,7 @@
     }
   }
 
-  &:nth-child(2) {
+  &--world {
     &::before {
       @media (min-width: @bpDesktop) {
         .setBg("", 0, 0, false, 0, 186, 300, "../img/iphone-screen-2-desktop@1x.png");
@@ -73,7 +73,7 @@
     }
   }
 
-  &:nth-child(3) {
+  &--friends {
     &::before {
       .setBg("", false, 0, 0, 0, 157, 278, "../img/iphone-screen-3-mobile@1x.png");
       background-size: 100%;
